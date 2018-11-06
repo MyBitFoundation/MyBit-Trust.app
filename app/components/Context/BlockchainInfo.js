@@ -58,6 +58,13 @@ class BlockchainInfo extends React.Component {
     } catch (err) {
       console.log(err);
     }
+    window.web3.currentProvider.publicConfigStore.on("update", data => {
+      if (
+        data["selectedAddress"].toUpperCase() !==
+        this.state.user.userName.toUpperCase()
+      )
+        window.location.reload();
+    });
   }
 
   async getNetwork(){
