@@ -1,8 +1,8 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import Loading from './loading.svg';
 import Img from '../Img';
+import Loading from './loading.svg';
 
 const StyledLoadingIndicator = styled.div`
   margin: 2em auto;
